@@ -6,24 +6,32 @@
 # to left of pivot and all greater elements to right
 # of pivot
 
+def partition(arr, low, high):
 
-def partition(lst, start, end):
 
-    i = start - 1  # index of smaller element
-    pivot = lst[end]  # pivot
-    print(lst)
-    print("start: {} ----- end: {} ---- pivot: {}".format(start, end, pivot))
-    print("")
-    for j in range(start, end):
+    print("low : {}  high: {}".format(low, high))
+    print(arr)
+    # set lowest to -1
+    i = low - 1
+    j = low
 
-        # If current element is smaller than or
-        # equal to pivot
-        if lst[j] <= pivot:
-            # increment index of smaller element
+    # set pivot to right most/ last element
+    pivot = arr[high]
+
+    # Scan list and swap values if less than pivot
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            # increment i, at the end loop i will point to the last small value, anything after i will be
+            # greater than pivot
             i += 1
-            lst[i], lst[j] = lst[j], lst[i]
+            arr[i], arr[j] = arr[j], arr[i]
+        else:
+            print("doing nothing")
 
-    lst[i + 1], lst[end] = lst[end], lst[i + 1]
+    # swap pivot with index i + 1 to move the pivot to its right sorted index
+    arr[i+1], arr[high] = arr[high], arr[i+1]
+
+    # return the index of pivot
     return i + 1
 
 
@@ -33,21 +41,19 @@ def partition(lst, start, end):
 # end  --> Ending index
 
 # Function to do Quick sort
-def quickSort(arr, start, end):
-    if start < end:
-        # pi is partitioning index, arr[p] is now
-        # at right place
-        pi = partition(arr, start, end)
+def quickSort(arr, low, high):
+    #print("in quick sort")
+    if low < high:
+        p = partition(arr, low, high)
+        quickSort(arr, low, p - 1)
+        quickSort(arr, p + 1, high)
 
-        # Separately sort elements before
-        # partition and after partition
-        quickSort(arr, start, pi - 1)
-        quickSort(arr, pi + 1, end)
 
 if __name__ == '__main__':
     # Driver code to test above
     arr = [10, 7, 8, 9, 1, 5, 3, 2]
     n = len(arr)
+    print(n)
     quickSort(arr, 0, n - 1)
     print ("Sorted array is:")
     print(arr)
