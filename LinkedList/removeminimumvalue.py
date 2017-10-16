@@ -1,7 +1,5 @@
 from linkedlist import UnorderedList
-from linkedlist import Node
 import sys
-
 
 
 def remove_minimum(ll):
@@ -28,21 +26,22 @@ def remove_minimum(ll):
         prev_to_smallest_so_far.setNext(smallest_so_far.getNext())
     #print("Previous {}  Smallest {}".format(prev_to_smallest_so_far.data, smallest_so_far.data))
 
-lo = UnorderedList()
-lo.add(1)
-lo.add(3)
-lo.add(2)
-lo.add(15)
-lo.add(5)
-lo.add(10)
-lo.add(7)
-lo.add(8)
-lo.add(15)
-print("***********************")
-print(lo.lprint())
-print(lo.toArray())
-print("***********************")
-print("***********************")
-remove_minimum(lo)
-print(lo.toArray())
-print("***********************")
+if __name__ == '__main__':
+    lo = UnorderedList()
+    lo.add(1)
+    lo.add(3)
+    lo.add(2)
+    lo.add(15)
+    lo.add(5)
+    lo.add(10)
+    lo.add(7)
+    lo.add(8)
+    lo.add(15)
+    print("***********************")
+    print(lo.lprint())
+    print(lo.toArray())
+    print("***********************")
+    print("***********************")
+    remove_minimum(lo)
+    print(lo.toArray())
+    print("***********************")

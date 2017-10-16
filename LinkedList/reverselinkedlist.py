@@ -1,20 +1,4 @@
-class Node(object):
-
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-    def getData(self):
-        return self.data
-
-    def getNext(self):
-        return self.next
-
-    def setData(self, newdata):
-        self.data = newdata
-
-    def setNext(self, newnext):
-        self.next = newnext
+from node import Node
 
 
 class OrderedList(object):
@@ -131,19 +115,20 @@ class OrderedList(object):
             print(cur.getData())
             cur = cur.getNext()
 
-lo = OrderedList()
-lo.add(1)
-lo.add(2)
-lo.add(3)
-lo.add(4)
-lo.add(5)
-lo.add(7)
-lo.add(8)
-print("***********************")
-print(lo.toArray())
-print("***********************")
-lo.reverse()
-print("***********************")
+if __name__ == '__main__':
+    lo = OrderedList()
+    lo.add(1)
+    lo.add(2)
+    lo.add(3)
+    lo.add(4)
+    lo.add(5)
+    lo.add(7)
+    lo.add(8)
+    print("***********************")
+    print(lo.toArray())
+    print("***********************")
+    lo.reverse()
+    print("***********************")
 
-print(lo.toArray())
-print("***********************")
+    print(lo.toArray())
+    print("***********************")

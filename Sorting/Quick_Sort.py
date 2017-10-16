@@ -6,6 +6,12 @@
 # to left of pivot and all greater elements to right
 # of pivot
 
+'''
+Best case and worst case
+https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/analysis-of-quicksort
+'''
+
+
 def partition(arr, low, high):
 
 
