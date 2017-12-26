@@ -61,4 +61,4 @@ def isBalanced(expr):
     return len(stack) == 0
 
 
-print(isBalanced("([])}{"))
+print(is_balanced("["))

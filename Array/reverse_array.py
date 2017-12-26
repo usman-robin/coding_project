@@ -7,7 +7,7 @@ import random
 def main():
     # mylist = [1, 2, 3, 4, 5, 6, 7, 8]
 
-    mylist = "Hello World"
+    mylist = "Let's take LeetCode contest"
 
     new_list = reverse_array(mylist)
     print (mylist)

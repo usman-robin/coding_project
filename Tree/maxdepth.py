@@ -1,5 +1,6 @@
 from tree import BinarySearchTree
 
+
 def maxDepth(node):
     if node is None:
         return 0

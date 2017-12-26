@@ -24,8 +24,7 @@ if __name__ == '__main__':
     for i in range(8):
         print("fib {}  ::  {}".format(i, fib_recursion(i)))
 
-
-
+    print("fib {}  ::  {}".format(6, fib_recursion(6)))
     # 0 1 1 2 3 5 8 13
 
 
